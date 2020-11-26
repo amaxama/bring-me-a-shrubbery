@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/shrub1.jpg');
+    res.sendFile('/shrub1.jpg', { root: __dirname });
 })
 
 app.listen(process.env.PORT || 3000, 
